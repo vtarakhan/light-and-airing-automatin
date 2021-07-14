@@ -8,6 +8,7 @@ DHT dht(DHTPIN, DHT22);
 volatile boolean flagHCSR501_1;
 volatile boolean flagHCSR501_2;
 
+// функции прерываний для реакции на датчики движения
 void intHCSR501_1() {
   flagHCSR501_1 = digitalRead(PIN_HCSR501_1);
   if (flagHCSR501_1 == true) {
